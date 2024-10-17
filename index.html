@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Interactivo de Hardware</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Diagnostica y Repara tu Computadora</h1>
+        <p>Guía interactiva paso a paso para solucionar problemas comunes de hardware.</p>
+    </header>
+
+    <section id="diagnostico">
+        <h2>Diagnóstico de Problemas</h2>
+        <form>
+            <label>
+                <input type="radio" name="sintoma" value="pantalla-negra"> Pantalla negra
+            </label><br>
+            <label>
+                <input type="radio" name="sintoma" value="no-enciende"> No enciende
+            </label><br>
+            <label>
+                <input type="radio" name="sintoma" value="ruido-ventilador"> Ruido en el ventilador
+            </label><br>
+            <label>
+                <input type="radio" name="sintoma" value="congelamiento"> Congelamiento
+            </label><br>
+            <button type="button" onclick="mostrarSolucion()">Mostrar Solución</button>
+        </form>
+    </section>
+
+    <section id="resultado" style="display:none;">
+        <h2>Resultados</h2>
+        <div id="causas"></div>
+        <div id="solucion"></div>
+        <div id="imagen-solucion"></div>
+        <div id="guia-paso-a-paso"></div>
+        <div id="base-conocimientos"></div>
+        <div id="simulador-interactivo"></div>
+    </section>
+
+    <section id="comentarios">
+        <h2>Comentarios</h2>
+        <form id="form-comentarios" onsubmit="agregarComentario(event)">
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+            <textarea id="comentario" placeholder="Tu comentario" required></textarea>
+            <button type="submit">Enviar Comentario</button>
+        </form>
+        <div id="lista-comentarios"></div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
